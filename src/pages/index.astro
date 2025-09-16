@@ -51,10 +51,16 @@ import ContactForm from "../components/ContactForm.astro";
   <section class="mx-auto max-w-6xl px-4 py-12 md:py-16">
     <h2 class="mb-6 text-2xl font-semibold text-center">Featured Projects</h2>
     <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
-      <a href="/cases" class="rounded-2xl border shadow-sm bg-white p-6 text-center hover:shadow">See all cases →</a>
-      <a href="/cases" class="rounded-2xl border shadow-sm bg-white p-6 text-center hover:shadow">Sample project</a>
-      <a href="/cases" class="rounded-2xl border shadow-sm bg-white p-6 text-center hover:shadow">Sample project</a>
-    </div>
+  <div class="col-span-full flex justify-center">
+    <a
+      href="/cases"
+      class="rounded-2xl border shadow-sm bg-white p-6 text-center hover:shadow"
+    >
+      See all cases →
+    </a>
+  </div>
+</div>
+
   </section>
 
   <!-- ABOUT -->
@@ -64,13 +70,12 @@ import ContactForm from "../components/ContactForm.astro";
       <img src="/about/dad.jpg" alt="Founder" class="h-48 w-48 rounded-xl object-cover border mx-auto md:mx-0" />
       <p class="text-slate-700 text-lg">
         Hi, I’m [Dad’s Name]. I’ve been building homes in [region] for over 20 years. My goal is to create solid, beautiful houses where families thrive.
-
+  </section>
         
   <!-- CONTACT -->
-  <section class="mx-auto max-w-6xl px-4 py-12 md:py-16" id="contact">
-    <h2 class="mb-6 text-2xl font-semibold text-center">Contact</h2>
-    <div class="max-w-2xl mx-auto rounded-2xl border shadow-sm bg-white p-6">
-      <ContactForm />
-    </div>
-  </section>
+<section class="mx-auto max-w-6xl px-4 py-12 md:py-16" id="contact">
+  <ContactForm />
+</div>
+</section>
+
 </Base>
