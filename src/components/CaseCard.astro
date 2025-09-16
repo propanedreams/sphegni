@@ -1,0 +1,10 @@
+---
+const { title, summary, cover, slug } = Astro.props;
+---
+<a href={`/cases/${slug}`} class="block rounded-xl border overflow-hidden hover:shadow">
+  {cover && <img src={cover} alt={title} class="h-48 w-full object-cover" loading="lazy" />}
+  <div class="p-4">
+    <h3 class="font-semibold">{title}</h3>
+    <p class="text-sm text-slate-600">{summary}</p>
+  </div>
+</a>

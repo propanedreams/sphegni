@@ -1,1 +1,15 @@
 @import "tailwindcss";
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional tiny base tweaks (no Tailwind utilities used here) */
+html { scroll-behavior: smooth; }
+body {
+  background: #ffffff;
+  color: #0f172a; /* slate-900ish */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

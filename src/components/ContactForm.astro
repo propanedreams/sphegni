@@ -1,0 +1,108 @@
+<!-- CONTACT -->
+<section class="mx-auto max-w-6xl px-4 py-12 md:py-16" id="contact">
+  <h2 class="mb-8 text-2xl font-semibold text-center">Kontakt os</h2>
+
+  <div class="grid gap-8 md:grid-cols-2">
+    <!-- Left: Form card -->
+    <div class="rounded-2xl border shadow-sm bg-white p-6">
+      <form
+        name="contact"
+        method="POST"
+        action="/thank-you"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        class="grid gap-4"
+      >
+        <!-- Netlify needs this hidden field -->
+        <input type="hidden" name="form-name" value="contact" />
+
+        <!-- Honeypot (spam trap) -->
+        <p class="hidden">
+          <label>Don’t fill this out: <input name="bot-field" /></label>
+        </p>
+
+        <!-- Name -->
+        <div>
+          <label for="name" class="mb-1 block text-sm font-medium">Navn *</label>
+          <input
+            id="name"
+            name="name"
+            required
+            placeholder="Navn *"
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+          />
+        </div>
+
+        <!-- Phone -->
+        <div>
+          <label for="telefon" class="mb-1 block text-sm font-medium">Telefon *</label>
+          <input
+            id="telefon"
+            name="telefon"
+            required
+            placeholder="Telefon *"
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="tel"
+            inputmode="tel"
+          />
+        </div>
+
+        <!-- Email -->
+        <div>
+          <label for="email" class="mb-1 block text-sm font-medium">E-mail *</label>
+          <input
+            id="email"
+            name="email"
+            required
+            placeholder="E-mail *"
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="email"
+          />
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="besked" class="mb-1 block text-sm font-medium">Besked *</label>
+          <textarea
+            id="besked"
+            name="message"
+            required
+            rows="6"
+            placeholder="Besked *"
+            class="w-full rounded-lg border border-slate-300 px-3 py-2 placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+          ></textarea>
+        </div>
+
+        <!-- Optional reCAPTCHA (enable in Netlify first) -->
+        <!-- <div data-netlify-recaptcha="true"></div> -->
+
+        <!-- Submit -->
+        <div class="pt-2">
+          <button
+            type="submit"
+            class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 font-medium text-white hover:bg-blue-700"
+          >
+            Send besked
+          </button>
+        </div>
+
+        <!-- Optional validation summary slot (show if you add JS validation later) -->
+        <!-- <p class="text-sm text-red-600">Nogle felter er ikke udfyldt korrekt</p> -->
+      </form>
+    </div>
+
+    <!-- Right: “Prefer phone/email?” content -->
+    <div class="rounded-2xl border shadow-sm bg-white p-6">
+      <div class="space-y-3">
+        <p class="text-slate-700 font-medium">Kan du ikke lide formularer?</p>
+        <p class="text-slate-700">
+          Ring til os på tlf.:
+          <a href="tel:20447005" class="text-blue-700 underline hover:text-blue-800">20 44 70 05</a><br />
+          eller skriv en mail til
+          <a href="mailto:mail@aarhus-ts.dk" class="text-blue-700 underline hover:text-blue-800">mail@aarhus-ts.dk</a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>

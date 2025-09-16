@@ -1,0 +1,39 @@
+---
+import "../styles/global.css";
+const { title = "Builder Name", description = "Quality home construction" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b">
+      <div class="mx-auto max-w-6xl px-4 h-14 md:h-16 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/logo.svg" alt="Logo" class="h-15 md:h-15 w-auto" />
+          <span class="font-semibold text-sm md:text-base">SP Hegni</span>
+        </a>
+        <nav class="flex items-center gap-6">
+          <a href="/cases" class="text-sm font-medium text-slate-700 hover:text-slate-900">Cases</a>
+          <a href="/about" class="text-sm font-medium text-slate-700 hover:text-slate-900">About</a>
+          <a href="/#contact" class="inline-flex items-center rounded-lg bg-blue-600 px-4 py-2 text-white text-sm font-medium hover:bg-blue-700">Contact</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="flex-1">
+      <slot />
+    </main>
+
+    <footer class="border-t">
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm text-slate-600 flex flex-col sm:flex-row gap-3 sm:items-center sm:justify-between">
+        <p>© {new Date().getFullYear()} Builder Name. All rights reserved.</p>
+        <p><a class="underline" href="/privacy">Privacy</a></p>
+      </div>
+    </footer>
+  </body>
+</html>
